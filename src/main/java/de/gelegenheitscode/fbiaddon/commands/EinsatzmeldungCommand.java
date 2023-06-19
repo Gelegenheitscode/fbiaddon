@@ -17,7 +17,6 @@ import java.util.List;
 
 /**
  * @author Gelegenheitscode
- * @author kybuxd
  */
 public final class EinsatzmeldungCommand extends CommandBase implements ICommand {
 
