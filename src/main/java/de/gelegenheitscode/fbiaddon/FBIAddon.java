@@ -47,5 +47,6 @@ public class FBIAddon
     }
     public static void registerEvents() {
         MinecraftForge.EVENT_BUS.register(new DrugVaultListener());
+        MinecraftForge.EVENT_BUS.register(new DrahtListener());
     }
 }
