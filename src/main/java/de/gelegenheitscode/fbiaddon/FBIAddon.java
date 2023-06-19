@@ -3,7 +3,8 @@ package de.gelegenheitscode.fbiaddon;
 import de.gelegenheitscode.fbiaddon.commands.BurnCountCommand;
 import de.gelegenheitscode.fbiaddon.commands.DrugCountCommand;
 import de.gelegenheitscode.fbiaddon.commands.EinsatzmeldungCommand;
-import de.gelegenheitscode.fbiaddon.events.*;
+import de.gelegenheitscode.fbiaddon.commands.MegaphonCommand;
+import de.gelegenheitscode.fbiaddon.events.DrugVaultListener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.ClientCommandHandler;
@@ -44,9 +45,10 @@ public class FBIAddon
         ClientCommandHandler.instance.registerCommand(new EinsatzmeldungCommand());
         ClientCommandHandler.instance.registerCommand(new DrugCountCommand());
         ClientCommandHandler.instance.registerCommand(new BurnCountCommand());
+        ClientCommandHandler.instance.registerCommand(new MegaphonCommand());
     }
     public static void registerEvents() {
         MinecraftForge.EVENT_BUS.register(new DrugVaultListener());
-        MinecraftForge.EVENT_BUS.register(new DrahtListener());
+
     }
 }
