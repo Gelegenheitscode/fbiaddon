@@ -1,5 +1,8 @@
 package de.gelegenheitscode.fbiaddon.data;
 
+/**
+ * @author Gelegenheitscode
+ */
 public enum megaphon {
     SPERRGEBIET("Achtung, Achtung! Das FBI weist auf das aktuelle Sperrgebiet hin! Jeglicher Aufenthalt im und um das Gebiet ist nicht gestattet und wird mit Wantedpunkten geahndet!"),
     BOMBE("Achtung, Achtung! Das FBI weist auf die akute Terrorgefahr und auf das damit verbundene Sperrgebiet hin! Jeglicher Aufenthalt im und um das Gebiet wird mit Wantedpunkten geahndet!"),

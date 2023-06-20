@@ -21,12 +21,12 @@ public class DrugVaultListener {
             Matcher drugVaultDropMatcher = DRUG_VAULT_DROP_PATTERN.matcher(msg);
             if(drugVaultDropMatcher.find()) {
                 FBIAddon.DRUGCOUNT = FBIAddon.DRUGCOUNT + Integer.parseInt(drugVaultDropMatcher.group(3));
-                PlayerMessages.sendMessage("\u00A7bBisherige Einlagerungen\u00A78: \u00A7a" + FBIAddon.DRUGCOUNT + "g");
+                PlayerMessages.sendMessage("§bBisherige Einlagerungen§8: §a" + FBIAddon.DRUGCOUNT + "g");
             }
             Matcher newDrugVaultDropMatcher = NEW_DRUG_VAULT_DROP_PATTERN.matcher(msg);
             if(newDrugVaultDropMatcher.find()) {
                 FBIAddon.DRUGCOUNT = FBIAddon.DRUGCOUNT + Integer.parseInt(newDrugVaultDropMatcher.group(1));
-                PlayerMessages.sendMessage("\u00A7bBisherige Einlagerungen\u00A78: \u00A7a" + FBIAddon.DRUGCOUNT + "g");
+                PlayerMessages.sendMessage("§bBisherige Einlagerungen§8: §a" + FBIAddon.DRUGCOUNT + "g");
             }
         }
         if(FBIAddon.BURNCOUNT > -1) {
@@ -35,14 +35,14 @@ public class DrugVaultListener {
             if(drugVaultBurnMatcher.find()) {
                 FBIAddon.BURNCOUNT = FBIAddon.BURNCOUNT + Integer.parseInt(drugVaultBurnMatcher.group(1));
                 e.setCanceled(true);
-                PlayerMessages.sendMessage("\u00A7bBisherige Einnahmen\u00A78: \u00A7a" + FBIAddon.BURNCOUNT + "$");
+                PlayerMessages.sendMessage("§bBisherige Einnahmen§8: §a" + FBIAddon.BURNCOUNT + "$");
             }
         } else {
             String msg = e.getMessage().getUnformattedText();
             Matcher drugVaultBurnMatcher = DRUG_VAULT_BURN_PATTERN.matcher(msg);
             if (drugVaultBurnMatcher.find()) {
                 e.setCanceled(true);
-                PlayerMessages.sendMessage("\u00A7bEinkommen durch diese Verbrennung\u00A78: \u00A7a" + drugVaultBurnMatcher.group(1) + "$");
+                PlayerMessages.sendMessage("§bEinkommen durch diese Verbrennung§8: §a" + drugVaultBurnMatcher.group(1) + "$");
             }
         }
     }

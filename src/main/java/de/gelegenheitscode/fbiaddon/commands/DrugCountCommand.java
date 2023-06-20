@@ -32,7 +32,7 @@ public class DrugCountCommand extends CommandBase implements ICommand {
             PlayerMessages.sendMessage("Du hast den Drogencounter aktiviert.");
         }
         else {
-            PlayerMessages.sendMessage("Du hast den Drogencounter beendet. \u00A77(\u00A7e" + FBIAddon.DRUGCOUNT + "g\u00A77)");
+            PlayerMessages.sendMessage("Du hast den Drogencounter beendet. §7(§e" + FBIAddon.DRUGCOUNT + "g§7)");
             FBIAddon.DRUGCOUNT = -1;
         }
     }

@@ -43,7 +43,7 @@ public final class EinsatzmeldungCommand extends CommandBase implements ICommand
             return;
         }
         final String message = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
-        PlayerMessages.sendMessage("Du hast \u00A7e" + type.getDisplayName() + " \u00A73im Discord gemeldet!");
+        PlayerMessages.sendMessage("Du hast §e" + type.getDisplayName() + " §3im Discord gemeldet!");
         p.sendChatMessage("/sms 100564 custom \"Es wird " + type.getDisplayName() + " gemeldet!\" \"Nachricht von " + p.getName() + ": \n" + message + "\"");
     }
 

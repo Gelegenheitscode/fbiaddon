@@ -32,7 +32,7 @@ public class BurnCountCommand extends CommandBase implements ICommand {
             PlayerMessages.sendMessage("Du hast den Burncounter aktiviert.");
         }
         else {
-            PlayerMessages.sendMessage("Du hast den Burncounter beendet. \u00A77(\u00A7e" + FBIAddon.BURNCOUNT + "$\u00A77)");
+            PlayerMessages.sendMessage("Du hast den Burncounter beendet. §7(§e" + FBIAddon.BURNCOUNT + "$§7)");
             FBIAddon.BURNCOUNT = -1;
         }
     }

@@ -44,6 +44,7 @@ public class FBIAddon
         ClientCommandHandler.instance.registerCommand(new DrugCountCommand());
         ClientCommandHandler.instance.registerCommand(new BurnCountCommand());
         ClientCommandHandler.instance.registerCommand(new MegaphonCommand());
+        ClientCommandHandler.instance.registerCommand(new GovCommand());
     }
     public static void registerEvents() {
         MinecraftForge.EVENT_BUS.register(new DrugVaultListener());
