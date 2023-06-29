@@ -2,11 +2,13 @@ package de.gelegenheitscode.fbiaddon;
 
 import de.gelegenheitscode.fbiaddon.commands.*;
 import de.gelegenheitscode.fbiaddon.events.DrugVaultListener;
-import io.netty.handler.codec.http2.Http2HeadersEncoder;
+import de.gelegenheitscode.fbiaddon.events.ServerChatsListener;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,6 +25,7 @@ public class FBIAddon
     public static final Minecraft MINECRAFT = Minecraft.getMinecraft();
     public static int DRUGCOUNT = -1;
     public static int BURNCOUNT = -1;
+    public static boolean STREAMMODE = false;
     public static String getPrefix() {
         return TextFormatting.BLUE + "FBI " + TextFormatting.DARK_GRAY + "- " + TextFormatting.DARK_AQUA;
     }
@@ -31,6 +34,7 @@ public class FBIAddon
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        ConfigManager.sync("fbiaddon", Config.Type.INSTANCE);
     }
 
     @EventHandler
@@ -45,9 +49,10 @@ public class FBIAddon
         ClientCommandHandler.instance.registerCommand(new BurnCountCommand());
         ClientCommandHandler.instance.registerCommand(new MegaphonCommand());
         ClientCommandHandler.instance.registerCommand(new GovCommand());
+        ClientCommandHandler.instance.registerCommand(new StreamModeCommand());
     }
     public static void registerEvents() {
         MinecraftForge.EVENT_BUS.register(new DrugVaultListener());
-
+        MinecraftForge.EVENT_BUS.register(new ServerChatsListener());
     }
 }
