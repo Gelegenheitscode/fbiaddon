@@ -57,7 +57,7 @@ public class ServerChatsListener {
                 e.setCanceled(true);
             }
         }
-        if(message.startsWith("Get\u00f6tet") || message.startsWith("Gel\u00f6scht") || message.startsWith("\u27A5") || message.startsWith("Eingesperrt") || message.startsWith("Entlassung") || message.startsWith("Gesucht") || message.startsWith("Ticket") || message.startsWith("F\u00fchrerscheinabnahme") || message.startsWith("Waffenscheinabnahme") || message.startsWith("F\u00fchrerscheinr\u00fcckgabe") || message.startsWith("Waffenscheinr\u00fcckgabe") || message.startsWith("Drogenabnahme") || message.startsWith("Waffenabnahme") || message.startsWith("Peilsender") || message.startsWith("HQ:") || message.contains("m)")){
+        if(message.startsWith("Get\u00f6tet") || message.startsWith("Gel\u00f6scht") || message.startsWith("\u27A5") || message.startsWith("Eingesperrt") || message.startsWith("Entlassung") || message.startsWith("Gesucht") || message.startsWith("Ticket") || message.startsWith("F\u00fchrerscheinabnahme") || message.startsWith("Waffenscheinabnahme") || message.startsWith("F\u00fchrerscheinr\u00fcckgabe") || message.startsWith("Waffenscheinr\u00fcckgabe") || message.startsWith("Drogenabnahme") || message.startsWith("Waffenabnahme") || message.startsWith("Peilsender") || message.startsWith("HQ:") || message.contains("m\u00a77)") || message.contains("Unterwegs")){
             if(FBIAddon.STREAMMODE){
                 e.setCanceled(true);
             }
